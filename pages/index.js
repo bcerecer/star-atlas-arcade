@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { FontFace, Button } from 'react-nes-component';
+import Link from 'next/Link';
 
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <FontFace />
       <Head>
         <title>Star Atlas Arcade - Home</title>
         <meta name="description" content="The Star Atlas Arcade" />
@@ -25,6 +28,9 @@ export default function Home() {
         <section>
           <Image src="/banner.png" width={1920 / 2} height={720 / 2} />
         </section>
+        <Link href="/retro-space-shooter">
+          <Button>PLAY</Button>
+        </Link>
       </main>
     </div>
   );
